@@ -1,0 +1,19 @@
+
+<form class="form-horizontal">
+    <div ng-repeat="searchParam in $ctrl.searchParams">
+        <div class="form-group">
+            <label for="{{searchParam.param}}" class="col-sm-4 control-label">{{searchParam.label}}</label>
+            <div class="col-sm-8">
+                <input type="{{searchParam.type}}" ng-model="searchParam['value']" id= "{{searchParam.param}}" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <input  type="submit" ng-click="$ctrl.search()" value="Search" />
+        <input  type="submit" ng-click="$ctrl.showAll()" value="Show All" />
+        <input  type="submit" ng-click="$ctrl.add()" value="Add New" />
+    </div>
+</form>
+<div ng-if="$ctrl.error" class="alert alert-danger" role="alert">
+    {{$ctrl.message}}
+</div>

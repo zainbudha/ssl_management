@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="ssl" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="ssl" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="ssl" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="ssl" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SSL Manager</title>
+  <meta name="description" content="A portal to manage SSL certificates">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  <div class="page-header text-center">
+    <h1>SSL Certificate Manager</h1>
+  </div>
+
+  <div class="pull-left navbar" style="padding-right:2em">
+    <ssl-search></ssl-search>
+  </div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div class="container" ng-view></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+  <script src="model/model.js"></script>
+  <script src="model/uisettings.js"></script>
+  <script src="model/listModel.js"></script>
+  <script src="model/sslModel.js"></script>
+  <script src="model/sslAllModel.js"></script>
+  <script src="model/searchModel.js"></script>
+  <script src="model/addSsl.js"></script>
+  <script src="model/editSsl.js"></script>
+  <script src="model/deleteSsl.js"></script>
+  <script src="filters/sslFilters.js"></script>
+  <script src="filters/sslValue.js"></script>
+  <script src="components/search/search.js"></script>
+  <script src="components/search/ssl-search.js"></script>
+  <script src="listView/listView.js"></script>
+  <script src="listView/SslListController.js"></script>
+  <script src="sslView/sslView.js"></script>
+  <script src="sslView/SslController.js"></script>  
+  <script src="sslEdit/sslEdit.js"></script>
+  <script src="sslEdit/SslEditController.js"></script>  
+</body>
+</html>

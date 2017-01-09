@@ -1,0 +1,10 @@
+<a href="" ng-click="sslController.back()">Back</a>
+<div>
+  <div>
+    <h3>SSL certificate</h4>
+    <h4>Issued to {{sslController.ssl.issuedTo.value}} by {{sslController.ssl.issuedBy.value}}</h6>
+    <p>Valid from {{sslController.ssl.validFrom.value | date:'MM/dd/yyyy'}} to {{sslController.ssl.validTo.value | date:'MM/dd/yyyy'}}</p>
+    <a href="" ng-click="sslController.edit()">Edit</a>
+    <a href="" ng-click="sslController.delete()">Delete</a>
+  </div>
+</div>

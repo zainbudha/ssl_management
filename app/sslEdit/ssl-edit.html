@@ -1,0 +1,14 @@
+<a href="" ng-click="sslEditController.back()">Back</a>
+<form>
+    <div ng-repeat="(key,value) in sslEditController.ssl">
+        <div class="form-group col-sm-4">
+            <label for="{{key}}" class="control-label">{{key}}</label>
+            <input type="{{value.type}}" id= "{{key}}" class="form-control" ng-model="value.value">
+        </div>
+    </div>
+    <input class="col-sm-3" type="submit" ng-click="sslEditController.submit()" value="Submit" />
+</form>
+
+<div class="col-sm-4" ng-if="sslEditController.error" class="alert alert-danger" role="alert">
+    {{sslEditController.message}}
+</div>

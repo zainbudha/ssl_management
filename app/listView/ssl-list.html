@@ -1,0 +1,18 @@
+<div ng-if="sslListController.showTable()" class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th ng-repeat="field in sslListController.fields">
+                    {{field.label}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>            
+            <tr ng-repeat="ssl in sslListController.sslList" ng-click="sslListController.display(ssl)" style="cursor: pointer">
+                <td ng-repeat="(key, param) in ssl.parameters">
+                    {{param | sslValue}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
